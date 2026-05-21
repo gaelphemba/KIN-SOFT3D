@@ -65,11 +65,8 @@ function setActiveNav() {
                 link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
             });
             if (domainesToggle) {
-                if (id === 'domaines' || ['loisir', 'education', 'formation', 'tourisme', 'locations'].includes(id)) {
-                    domainesToggle.classList.add('active');
-                } else {
-                    domainesToggle.classList.remove('active');
-                }
+                const domainIds = ['domaines', 'loisir', 'education', 'formation', 'tourisme', 'locations'];
+                domainesToggle.classList.toggle('active', domainIds.includes(id));
             }
         }
     });

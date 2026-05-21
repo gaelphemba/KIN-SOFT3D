@@ -581,6 +581,133 @@ h1, h2, h3 {
     }
 }
 
+/* ── Team grid ── */
+.team {
+    background: var(--bg);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.team-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.team-card-media {
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.team-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.team-card:hover .team-card-media img {
+    transform: scale(1.06);
+}
+
+.team-card-body {
+    padding: 24px;
+}
+
+.team-card-body h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.team-card-body p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* ── Jeux catalog page ── */
+.jeux-catalog {
+    background: var(--bg);
+    padding-top: 60px;
+}
+
+.jeux-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 28px;
+}
+
+.jeu-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.jeu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+}
+
+.jeu-card--featured {
+    grid-column: 1 / -1;
+}
+
+.jeu-card--featured .jeu-card-media {
+    aspect-ratio: 21 / 9;
+}
+
+.jeu-card-media {
+    aspect-ratio: 16 / 10;
+    background: #000;
+    overflow: hidden;
+}
+
+.jeu-card-media img,
+.jeu-card-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.jeu-card-body {
+    padding: 22px;
+}
+
+.jeu-card-body h3 {
+    font-size: 1.35rem;
+    margin-bottom: 8px;
+}
+
+.jeu-card-body p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.domain-page-hero--compact {
+    min-height: 40vh;
+}
+
+.site-nav a.active {
+    color: var(--text);
+}
+
+.site-nav a.active::after {
+    width: 100%;
+}
+
 /* ── Games grid ── */
 .games {
     background: var(--bg);
