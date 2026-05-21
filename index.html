@@ -4,90 +4,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>KinSoft3D</title>
-
-    <!-- CSS -->
+    <meta name="description" content="KinSoft3D — Studio de création de jeux vidéo, expériences 3D et univers interactifs.">
+    <title>KinSoft3D — Studio de jeux & 3D</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="logo">
-            KinSoft3D
-        </div>
+    <header class="site-header" id="header">
+        <a href="#home" class="logo" aria-label="KinSoft3D — Accueil">
+            <span class="logo-mark">K</span>
+            <span class="logo-text">KinSoft3D</span>
+        </a>
 
-        <nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="site-nav" id="siteNav">
             <a href="#home">Accueil</a>
-            <a href="#projects">Projets</a>
-            <a href="#about">À propos</a>
+            <a href="#games">Nos jeux</a>
+            <a href="#showcase">Démo</a>
+            <a href="#studio">Studio</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- HERO -->
-    <section class="hero" id="home">
+    <main>
 
-        <h1>Bienvenue chez KinSoft3D</h1>
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="hero-bg">
+                <img src="images/BG_accueil.png" alt="" aria-hidden="true">
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="hero-eyebrow">Studio indépendant</p>
+                <h1>Créons des mondes<br><span>qui prennent vie</span></h1>
+                <p class="hero-desc">
+                    KinSoft3D conçoit des jeux vidéo, des expériences 3D immersives
+                    et des univers interactifs pour des joueurs exigeants.
+                </p>
+                <div class="hero-actions">
+                    <a href="#games" class="btn btn-primary">Découvrir nos jeux</a>
+                    <a href="#showcase" class="btn btn-ghost">Voir la démo</a>
+                </div>
+            </div>
+            <a href="#games" class="hero-scroll" aria-label="Défiler vers le contenu">
+                <span>Défiler</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </section>
 
-        <p>
-            Studio indépendant de création de jeux vidéo,
-            d’expériences 3D et d’univers interactifs.
-        </p>
+        <!-- NOS JEUX -->
+        <section class="section games" id="games">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Nos jeux</h2>
+                    <p>Des prototypes ambitieux aux démos jouables — chaque projet pousse les limites du gameplay et du rendu 3D.</p>
+                </div>
 
-        <button>Découvrir nos projets</button>
+                <div class="games-grid">
+                    <article class="game-card reveal">
+                        <div class="game-card-media">
+                            <img src="images/p1.jpeg" alt="Projet Alpha — aperçu du jeu">
+                        </div>
+                        <div class="game-card-body">
+                            <span class="tag">En développement</span>
+                            <h3>Projet Alpha</h3>
+                            <p>Aventure action en monde ouvert avec mécaniques de combat dynamiques.</p>
+                            <a href="#showcase" class="card-link">En savoir plus →</a>
+                        </div>
+                    </article>
 
-    </section>
+                    <article class="game-card reveal">
+                        <div class="game-card-media">
+                            <img src="images/p2.jpeg" alt="Projet Nova — aperçu du jeu">
+                        </div>
+                        <div class="game-card-body">
+                            <span class="tag">Prototype</span>
+                            <h3>Projet Nova</h3>
+                            <p>Expérience sci-fi narrative avec environnements générés en temps réel.</p>
+                            <a href="#showcase" class="card-link">En savoir plus →</a>
+                        </div>
+                    </article>
 
-    <!-- PROJECTS -->
-    <section class="projects" id="projects">
+                    <article class="game-card reveal">
+                        <div class="game-card-media">
+                            <img src="images/p3.jpeg" alt="Projet Pulse — aperçu du jeu">
+                        </div>
+                        <div class="game-card-body">
+                            <span class="tag">Concept art</span>
+                            <h3>Projet Pulse</h3>
+                            <p>Arcade rythmique mêlant musique, lumière et niveaux tridimensionnels.</p>
+                            <a href="#showcase" class="card-link">En savoir plus →</a>
+                        </div>
+                    </article>
 
-        <h2>Nos Projets</h2>
+                    <article class="game-card reveal">
+                        <div class="game-card-media">
+                            <img src="images/p4.jpeg" alt="Projet Horizon — aperçu du jeu">
+                        </div>
+                        <div class="game-card-body">
+                            <span class="tag">R&D</span>
+                            <h3>Projet Horizon</h3>
+                            <p>Exploration contemplative et puzzles physiques dans des paysages vastes.</p>
+                            <a href="#showcase" class="card-link">En savoir plus →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-        <div class="project-card">
+        <!-- DÉMO FEATURED -->
+        <section class="section showcase" id="showcase">
+            <div class="showcase-inner">
+                <div class="showcase-media reveal">
+                    <img src="images/jeux_demo.jpeg" alt="Démo de gameplay KinSoft3D">
+                </div>
+                <div class="showcase-content reveal">
+                    <h2>Gameplay &amp; immersion</h2>
+                    <p>
+                        Notre démo met en avant le rendu visuel, les animations et les interactions
+                        que nous intégrons dans chaque titre. Chaque frame est pensée pour
+                        captiver et surprendre.
+                    </p>
+                    <ul class="showcase-stats">
+                        <li>
+                            <strong>4+</strong>
+                            <span>Projets actifs</span>
+                        </li>
+                        <li>
+                            <strong>3D</strong>
+                            <span>Moteur custom</span>
+                        </li>
+                        <li>
+                            <strong>100%</strong>
+                            <span>Indépendant</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary" id="openVideo">Regarder la bande-annonce</button>
+                </div>
+            </div>
+        </section>
 
-            <img src="images/game1.jpg" alt="Projet jeu vidéo">
+        <!-- MATÉRIELS 3D -->
+        <section class="section studio" id="studio">
+            <div class="studio-bg">
+                <img src="images/materiels.png" alt="" aria-hidden="true">
+            </div>
+            <div class="studio-overlay"></div>
+            <div class="container studio-content">
+                <div class="section-head reveal">
+                    <h2>Le studio</h2>
+                    <p>
+                        De la modélisation 3D au level design, KinSoft3D maîtrise toute la chaîne
+                        de production pour livrer des expériences cohérentes et mémorables.
+                    </p>
+                </div>
+                <div class="studio-pillars reveal">
+                    <div class="pillar">
+                        <h3>Game Design</h3>
+                        <p>Mécaniques innovantes, boucles de gameplay équilibrées et direction artistique forte.</p>
+                    </div>
+                    <div class="pillar">
+                        <h3>3D &amp; Assets</h3>
+                        <p>Modèles, textures et animations optimisés pour des performances fluides.</p>
+                    </div>
+                    <div class="pillar">
+                        <h3>Tech &amp; Outils</h3>
+                        <p>Pipelines internes et prototypes rapides pour itérer sans compromis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <h3>Nom du Jeu</h3>
+        <!-- CTA BAND -->
+        <section class="section cta-band">
+            <div class="container cta-inner reveal">
+                <h2>Rejoignez l'aventure</h2>
+                <p>Vous êtes passionné par le jeu vidéo, la 3D ou le code ? Parlons de collaboration.</p>
+                <a href="#contact" class="btn btn-primary">Nous contacter</a>
+            </div>
+        </section>
 
-            <p>
-                Description rapide de ton jeu vidéo.
-            </p>
+        <!-- CONTACT -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info reveal">
+                        <h2>Contact</h2>
+                        <p>Une question, un partenariat ou une demande de presse ? Écrivez-nous.</p>
+                        <a href="mailto:contact@kinsoft3d.com" class="contact-email">contact@kinsoft3d.com</a>
+                        <div class="social-links">
+                            <a href="#" aria-label="Twitter">X</a>
+                            <a href="#" aria-label="YouTube">YT</a>
+                            <a href="#" aria-label="Discord">DC</a>
+                        </div>
+                    </div>
+                    <form class="contact-form reveal" onsubmit="return false;">
+                        <label>
+                            <span>Nom</span>
+                            <input type="text" name="name" placeholder="Votre nom" required>
+                        </label>
+                        <label>
+                            <span>Email</span>
+                            <input type="email" name="email" placeholder="vous@email.com" required>
+                        </label>
+                        <label>
+                            <span>Message</span>
+                            <textarea name="message" rows="4" placeholder="Votre message…" required></textarea>
+                        </label>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-            <video controls>
-                <source src="videos/trailer1.mp4" type="video/mp4">
-            </video>
+    </main>
 
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a href="#home" class="logo footer-logo">
+                <span class="logo-mark">K</span>
+                <span class="logo-text">KinSoft3D</span>
+            </a>
+            <nav class="footer-nav">
+                <a href="#games">Jeux</a>
+                <a href="#showcase">Démo</a>
+                <a href="#studio">Studio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <p class="footer-copy">&copy; 2026 KinSoft3D. Tous droits réservés.</p>
         </div>
+    </footer>
 
-    </section>
+    <!-- VIDEO MODAL -->
+    <div class="video-modal" id="videoModal" aria-hidden="true">
+        <div class="video-modal-backdrop" id="closeVideo"></div>
+        <div class="video-modal-content">
+            <button class="video-modal-close" id="closeVideoBtn" aria-label="Fermer la vidéo">&times;</button>
+            <video controls id="trailerVideo">
+                <source src="videos/test.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture vidéo.
+            </video>
+        </div>
+    </div>
 
-    <!-- ABOUT -->
-    <section class="about" id="about">
-
-        <h2>À propos</h2>
-
-        <p>
-            KinSoft3D développe des jeux vidéo modernes,
-            immersifs et créatifs.
-        </p>
-
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-
-        <h2>Contact</h2>
-
-        <p>Email : contact@kinsoft3d.com</p>
-
-    </section>
-
-    <!-- JS -->
     <script src="script.js"></script>
-
 </body>
 
 </html>
