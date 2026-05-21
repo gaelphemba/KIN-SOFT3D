@@ -28,6 +28,21 @@
 
         <nav class="site-nav" id="siteNav">
             <a href="#home">Accueil</a>
+            <div class="nav-dropdown" id="navDropdown">
+                <button class="nav-dropdown-toggle" id="domainesToggle" aria-expanded="false" aria-haspopup="true">
+                    Domaines
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <ul class="nav-dropdown-menu" id="domainesMenu">
+                    <li><a href="#loisir">Loisir</a></li>
+                    <li><a href="#education">Éducation</a></li>
+                    <li><a href="#formation">Formation</a></li>
+                    <li><a href="#tourisme">Tourisme</a></li>
+                    <li><a href="#locations">Locations kit de jeu</a></li>
+                </ul>
+            </div>
             <a href="#games">Nos jeux</a>
             <a href="#showcase">Démo</a>
             <a href="#studio">Studio</a>
@@ -61,6 +76,68 @@
                     <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </a>
+        </section>
+
+        <!-- DOMAINES -->
+        <section class="section domaines" id="domaines">
+            <div class="container">
+                <div class="section-head reveal">
+                    <h2>Nos domaines</h2>
+                    <p>KinSoft3D intervient dans plusieurs secteurs pour créer des expériences interactives sur mesure.</p>
+                </div>
+
+                <div class="domaines-grid">
+                    <article class="domaine-card reveal" id="loisir">
+                        <div class="domaine-card-media">
+                            <img src="images/p5.jpeg" alt="Loisir — expériences ludiques">
+                        </div>
+                        <div class="domaine-card-body">
+                            <h3>Loisir</h3>
+                            <p>Jeux, animations et univers 3D pour le divertissement et les espaces de loisirs.</p>
+                        </div>
+                    </article>
+
+                    <article class="domaine-card reveal" id="education">
+                        <div class="domaine-card-media">
+                            <img src="images/p7.jpeg" alt="Éducation — apprentissage interactif">
+                        </div>
+                        <div class="domaine-card-body">
+                            <h3>Éducation</h3>
+                            <p>Solutions pédagogiques immersives pour écoles, musées et programmes éducatifs.</p>
+                        </div>
+                    </article>
+
+                    <article class="domaine-card reveal" id="formation">
+                        <div class="domaine-card-media">
+                            <img src="images/p8.jpeg" alt="Formation — modules interactifs">
+                        </div>
+                        <div class="domaine-card-body">
+                            <h3>Formation</h3>
+                            <p>Simulations et modules 3D pour la formation professionnelle et les ateliers pratiques.</p>
+                        </div>
+                    </article>
+
+                    <article class="domaine-card reveal" id="tourisme">
+                        <div class="domaine-card-media">
+                            <img src="images/p9.jpeg" alt="Tourisme — visites virtuelles">
+                        </div>
+                        <div class="domaine-card-body">
+                            <h3>Tourisme</h3>
+                            <p>Visites virtuelles, cartes interactives et expériences pour valoriser les destinations.</p>
+                        </div>
+                    </article>
+
+                    <article class="domaine-card reveal" id="locations">
+                        <div class="domaine-card-media">
+                            <img src="images/p10.jpeg" alt="Locations kit de jeu">
+                        </div>
+                        <div class="domaine-card-body">
+                            <h3>Locations kit de jeu</h3>
+                            <p>Location de kits de jeu et équipements interactifs pour événements et animations.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
 
         <!-- NOS JEUX -->
@@ -201,8 +278,17 @@
                 <div class="contact-grid">
                     <div class="contact-info reveal">
                         <h2>Contact</h2>
-                        <p>Une question, un partenariat ou une demande de presse ? Écrivez-nous.</p>
-                        <a href="mailto:contact@kinsoft3d.com" class="contact-email">contact@kinsoft3d.com</a>
+                        <p>Une question, un partenariat ou une demande de devis ? Contactez-nous.</p>
+                        <div class="contact-details">
+                            <a href="mailto:kinsoft3d@gmail.com" class="contact-link">
+                                <span class="contact-label">Email</span>
+                                kinsoft3d@gmail.com
+                            </a>
+                            <a href="tel:0829961765" class="contact-link">
+                                <span class="contact-label">Téléphone</span>
+                                082 996 1765
+                            </a>
+                        </div>
                         <div class="social-links">
                             <a href="#" aria-label="Twitter">X</a>
                             <a href="#" aria-label="YouTube">YT</a>
@@ -237,6 +323,7 @@
                 <span class="logo-text">KinSoft3D</span>
             </a>
             <nav class="footer-nav">
+                <a href="#domaines">Domaines</a>
                 <a href="#games">Jeux</a>
                 <a href="#showcase">Démo</a>
                 <a href="#studio">Studio</a>

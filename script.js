@@ -3,9 +3,23 @@ const header = document.getElementById('header');
 const navToggle = document.getElementById('navToggle');
 const siteNav = document.getElementById('siteNav');
 const navLinks = siteNav.querySelectorAll('a');
+const navDropdown = document.getElementById('navDropdown');
+const domainesToggle = document.getElementById('domainesToggle');
 
 window.addEventListener('scroll', () => {
     header.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+/* Domaines dropdown */
+domainesToggle.addEventListener('click', e => {
+    e.stopPropagation();
+    const open = navDropdown.classList.toggle('open');
+    domainesToggle.setAttribute('aria-expanded', open);
+});
+
+document.addEventListener('click', () => {
+    navDropdown.classList.remove('open');
+    domainesToggle.setAttribute('aria-expanded', 'false');
 });
 
 /* Mobile nav */
@@ -15,16 +29,20 @@ navToggle.addEventListener('click', () => {
     navToggle.setAttribute('aria-expanded', open);
 });
 
+function closeMobileNav() {
+    siteNav.classList.remove('open');
+    navToggle.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navDropdown.classList.remove('open');
+    domainesToggle.setAttribute('aria-expanded', 'false');
+}
+
 navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        siteNav.classList.remove('open');
-        navToggle.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-    });
+    link.addEventListener('click', closeMobileNav);
 });
 
 /* Active nav link on scroll */
-const sections = document.querySelectorAll('section[id]');
+const sections = document.querySelectorAll('section[id], .domaine-card[id]');
 
 function setActiveNav() {
     const scrollY = window.scrollY + 120;
@@ -38,6 +56,11 @@ function setActiveNav() {
             navLinks.forEach(link => {
                 link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
             });
+            if (id === 'domaines' || ['loisir', 'education', 'formation', 'tourisme', 'locations'].includes(id)) {
+                domainesToggle.classList.add('active');
+            } else {
+                domainesToggle.classList.remove('active');
+            }
         }
     });
 }

@@ -185,6 +185,82 @@ h1, h2, h3 {
     width: 100%;
 }
 
+/* Nav dropdown — Domaines */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    transition: color var(--transition);
+}
+
+.nav-dropdown-toggle svg {
+    transition: transform var(--transition);
+}
+
+.nav-dropdown.open .nav-dropdown-toggle svg {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-toggle:hover,
+.nav-dropdown.open .nav-dropdown-toggle,
+.nav-dropdown-toggle.active {
+    color: var(--text);
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    min-width: 220px;
+    list-style: none;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 8px 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: var(--transition);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+.nav-dropdown.open .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    transition: background var(--transition), color var(--transition);
+}
+
+.nav-dropdown-menu a::after {
+    display: none;
+}
+
+.nav-dropdown-menu a:hover {
+    background: rgba(209, 54, 57, 0.12);
+    color: var(--text);
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -329,6 +405,63 @@ h1, h2, h3 {
 .section-head p {
     color: var(--text-muted);
     font-size: 1.05rem;
+}
+
+/* ── Domaines ── */
+.domaines {
+    background: var(--surface);
+    border-block: 1px solid var(--border);
+}
+
+.domaines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.domaine-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    scroll-margin-top: calc(var(--header-h) + 24px);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.domaine-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+}
+
+.domaine-card-media {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.domaine-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.domaine-card:hover .domaine-card-media img {
+    transform: scale(1.05);
+}
+
+.domaine-card-body {
+    padding: 22px;
+}
+
+.domaine-card-body h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    color: var(--brand);
+}
+
+.domaine-card-body p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
 }
 
 /* ── Games grid ── */
@@ -570,17 +703,33 @@ h1, h2, h3 {
     margin-bottom: 24px;
 }
 
-.contact-email {
-    display: inline-block;
-    font-size: 1.2rem;
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.contact-link {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 1.15rem;
     font-weight: 600;
     color: var(--brand);
-    margin-bottom: 32px;
     transition: color var(--transition);
 }
 
-.contact-email:hover {
+.contact-link:hover {
     color: var(--text);
+}
+
+.contact-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
 }
 
 .social-links {
@@ -793,6 +942,27 @@ h1, h2, h3 {
     .site-nav.open {
         transform: translateY(0);
         opacity: 1;
+    }
+
+    .nav-dropdown {
+        width: 100%;
+    }
+
+    .nav-dropdown-menu {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        display: none;
+        margin-top: 8px;
+        box-shadow: none;
+        background: var(--surface-2);
+    }
+
+    .nav-dropdown.open .nav-dropdown-menu {
+        display: block;
+        transform: none;
     }
 
     .hero-scroll {
