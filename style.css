@@ -133,6 +133,10 @@ h1, h2, h3 {
     letter-spacing: 0.06em;
 }
 
+.logo img{
+    width: 80%;
+}
+
 .logo-mark {
     display: flex;
     align-items: center;
