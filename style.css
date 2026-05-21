@@ -462,6 +462,123 @@ h1, h2, h3 {
 .domaine-card-body p {
     font-size: 0.9rem;
     color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.domaine-card-link {
+    display: block;
+    color: inherit;
+}
+
+.domaine-card-link:hover .card-link {
+    color: var(--text);
+}
+
+/* ── Domain pages ── */
+.domain-page {
+    padding-top: var(--header-h);
+}
+
+.domain-page-hero {
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.domain-page-hero > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.domain-page-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--bg) 0%, rgba(10, 10, 12, 0.5) 50%, rgba(10, 10, 12, 0.3) 100%);
+}
+
+.domain-page-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 60px 0 48px;
+}
+
+.domain-page-hero-content h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 12px;
+}
+
+.domain-page-hero-content > p {
+    max-width: 560px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.domain-page-body {
+    background: var(--bg);
+}
+
+.domain-page-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.domain-page-text h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 20px;
+}
+
+.domain-page-text p {
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.domain-features {
+    list-style: none;
+    margin: 24px 0 32px;
+}
+
+.domain-features li {
+    padding: 10px 0 10px 20px;
+    border-left: 2px solid var(--accent);
+    margin-bottom: 8px;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.domain-page-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.domain-page-gallery img,
+.domain-page-gallery video {
+    width: 100%;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    object-fit: cover;
+}
+
+.domain-page-gallery video {
+    background: #000;
+}
+
+.nav-dropdown-menu a.active {
+    color: var(--text);
+    background: rgba(209, 54, 57, 0.12);
+}
+
+@media (max-width: 900px) {
+    .domain-page-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ── Games grid ── */
@@ -559,10 +676,13 @@ h1, h2, h3 {
     overflow: hidden;
 }
 
-.showcase-media img {
+.showcase-media img,
+.showcase-media video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+    background: #000;
 }
 
 .showcase-content {

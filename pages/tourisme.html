@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KinSoft3D — Domaine Tourisme : visites virtuelles et expériences 3D.">
+    <title>Tourisme — KinSoft3D</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="domain-page">
+
+    <header class="site-header scrolled" id="header">
+        <a href="../index.html" class="logo"><span class="logo-mark">K</span><span class="logo-text">KinSoft3D</span></a>
+        <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <nav class="site-nav" id="siteNav">
+            <a href="../index.html">Accueil</a>
+            <div class="nav-dropdown" id="navDropdown">
+                <button class="nav-dropdown-toggle active" id="domainesToggle" aria-expanded="false">Domaines
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </button>
+                <ul class="nav-dropdown-menu">
+                    <li><a href="loisir.html">Loisir</a></li>
+                    <li><a href="education.html">Éducation</a></li>
+                    <li><a href="formation.html">Formation</a></li>
+                    <li><a href="tourisme.html" class="active">Tourisme</a></li>
+                    <li><a href="locations.html">Locations kit de jeu</a></li>
+                </ul>
+            </div>
+            <a href="../index.html#games">Nos jeux</a>
+            <a href="../index.html#showcase">Démo</a>
+            <a href="../index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="domain-page-hero">
+            <img src="../images/domaine_tourisme.jpg" alt="Domaine Tourisme KinSoft3D">
+            <div class="domain-page-hero-overlay"></div>
+            <div class="domain-page-hero-content container">
+                <p class="hero-eyebrow">Domaine</p>
+                <h1>Tourisme</h1>
+                <p>Visites virtuelles, cartes interactives et expériences pour valoriser les destinations.</p>
+            </div>
+        </section>
+
+        <section class="section domain-page-body">
+            <div class="container domain-page-grid">
+                <div class="domain-page-text reveal">
+                    <h2>Voyager autrement en 3D</h2>
+                    <p>Nous créons des visites virtuelles de sites naturels, parcs zoologiques et lieux culturels pour attirer les visiteurs et enrichir l'expérience sur place.</p>
+                    <p>Cartes interactives, mini-jeux découverte et rendus photoréalistes mettent en valeur votre territoire ou attraction.</p>
+                    <ul class="domain-features">
+                        <li>Visites 360° et parcours guidés</li>
+                        <li>Expériences zoo et parcs naturels</li>
+                        <li>Outils promotionnels pour offices de tourisme</li>
+                    </ul>
+                    <a href="../index.html#contact" class="btn btn-primary">Demander un devis</a>
+                </div>
+                <div class="domain-page-gallery reveal">
+                    <img src="../images/jeu zoo.jpg" alt="Jeu zoo tourisme KinSoft3D">
+                    <img src="../images/zoo 2.jpg" alt="Expérience zoo interactive">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a href="../index.html" class="logo footer-logo"><span class="logo-mark">K</span><span class="logo-text">KinSoft3D</span></a>
+            <nav class="footer-nav">
+                <a href="loisir.html">Loisir</a>
+                <a href="education.html">Éducation</a>
+                <a href="formation.html">Formation</a>
+                <a href="tourisme.html">Tourisme</a>
+                <a href="locations.html">Locations</a>
+            </nav>
+            <p class="footer-copy">&copy; 2026 KinSoft3D. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>

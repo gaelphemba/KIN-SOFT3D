@@ -36,11 +36,11 @@
                     </svg>
                 </button>
                 <ul class="nav-dropdown-menu" id="domainesMenu">
-                    <li><a href="#loisir">Loisir</a></li>
-                    <li><a href="#education">Éducation</a></li>
-                    <li><a href="#formation">Formation</a></li>
-                    <li><a href="#tourisme">Tourisme</a></li>
-                    <li><a href="#locations">Locations kit de jeu</a></li>
+                    <li><a href="pages/loisir.html">Loisir</a></li>
+                    <li><a href="pages/education.html">Éducation</a></li>
+                    <li><a href="pages/formation.html">Formation</a></li>
+                    <li><a href="pages/tourisme.html">Tourisme</a></li>
+                    <li><a href="pages/locations.html">Locations kit de jeu</a></li>
                 </ul>
             </div>
             <a href="#games">Nos jeux</a>
@@ -88,53 +88,68 @@
 
                 <div class="domaines-grid">
                     <article class="domaine-card reveal" id="loisir">
-                        <div class="domaine-card-media">
-                            <img src="images/domaine_loisir.jpg" alt="Loisir — expériences ludiques">
-                        </div>
-                        <div class="domaine-card-body">
-                            <h3>Loisir</h3>
-                            <p>Jeux, animations et univers 3D pour le divertissement et les espaces de loisirs.</p>
-                        </div>
+                        <a href="pages/loisir.html" class="domaine-card-link">
+                            <div class="domaine-card-media">
+                                <img src="images/domaine_loisir.jpg" alt="Loisir — expériences ludiques">
+                            </div>
+                            <div class="domaine-card-body">
+                                <h3>Loisir</h3>
+                                <p>Jeux, animations et univers 3D pour le divertissement et les espaces de loisirs.</p>
+                                <span class="card-link">Découvrir le domaine →</span>
+                            </div>
+                        </a>
                     </article>
 
                     <article class="domaine-card reveal" id="education">
-                        <div class="domaine-card-media">
-                            <img src="images/domaine_education.jpg" alt="Éducation — apprentissage interactif">
-                        </div>
-                        <div class="domaine-card-body">
-                            <h3>Éducation</h3>
-                            <p>Solutions pédagogiques immersives pour écoles, musées et programmes éducatifs.</p>
-                        </div>
+                        <a href="pages/education.html" class="domaine-card-link">
+                            <div class="domaine-card-media">
+                                <img src="images/domaine_education.jpg" alt="Éducation — apprentissage interactif">
+                            </div>
+                            <div class="domaine-card-body">
+                                <h3>Éducation</h3>
+                                <p>Solutions pédagogiques immersives pour écoles, musées et programmes éducatifs.</p>
+                                <span class="card-link">Découvrir le domaine →</span>
+                            </div>
+                        </a>
                     </article>
 
                     <article class="domaine-card reveal" id="formation">
-                        <div class="domaine-card-media">
-                            <img src="images/domaine_formation.jpg" alt="Formation — modules interactifs">
-                        </div>
-                        <div class="domaine-card-body">
-                            <h3>Formation</h3>
-                            <p>Simulations et modules 3D pour la formation professionnelle et les ateliers pratiques.</p>
-                        </div>
+                        <a href="pages/formation.html" class="domaine-card-link">
+                            <div class="domaine-card-media">
+                                <img src="images/domaine_formation.jpg" alt="Formation — modules interactifs">
+                            </div>
+                            <div class="domaine-card-body">
+                                <h3>Formation</h3>
+                                <p>Simulations et modules 3D pour la formation professionnelle et les ateliers pratiques.</p>
+                                <span class="card-link">Découvrir le domaine →</span>
+                            </div>
+                        </a>
                     </article>
 
                     <article class="domaine-card reveal" id="tourisme">
-                        <div class="domaine-card-media">
-                            <img src="images/domaine_tourisme.jpg" alt="Tourisme — visites virtuelles">
-                        </div>
-                        <div class="domaine-card-body">
-                            <h3>Tourisme</h3>
-                            <p>Visites virtuelles, cartes interactives et expériences pour valoriser les destinations.</p>
-                        </div>
+                        <a href="pages/tourisme.html" class="domaine-card-link">
+                            <div class="domaine-card-media">
+                                <img src="images/domaine_tourisme.jpg" alt="Tourisme — visites virtuelles">
+                            </div>
+                            <div class="domaine-card-body">
+                                <h3>Tourisme</h3>
+                                <p>Visites virtuelles, cartes interactives et expériences pour valoriser les destinations.</p>
+                                <span class="card-link">Découvrir le domaine →</span>
+                            </div>
+                        </a>
                     </article>
 
                     <article class="domaine-card reveal" id="locations">
-                        <div class="domaine-card-media">
-                            <img src="images/domaine_location.jpg" alt="Locations kit de jeu">
-                        </div>
-                        <div class="domaine-card-body">
-                            <h3>Locations kit de jeu</h3>
-                            <p>Location de kits de jeu et équipements interactifs pour événements et animations.</p>
-                        </div>
+                        <a href="pages/locations.html" class="domaine-card-link">
+                            <div class="domaine-card-media">
+                                <img src="images/domaine_location.jpg" alt="Locations kit de jeu">
+                            </div>
+                            <div class="domaine-card-body">
+                                <h3>Locations kit de jeu</h3>
+                                <p>Location de kits de jeu et équipements interactifs pour événements et animations.</p>
+                                <span class="card-link">Découvrir le domaine →</span>
+                            </div>
+                        </a>
                     </article>
                 </div>
             </div>
@@ -204,14 +219,16 @@
         <section class="section showcase" id="showcase">
             <div class="showcase-inner">
                 <div class="showcase-media reveal">
-                    <img src="images/jeu loisir 2.jpeg" alt="Démo de gameplay KinSoft3D">
+                    <video class="showcase-video" autoplay muted loop playsinline
+                        aria-label="Gameplay Terre des Zombies">
+                        <source src="videos/jeu terre zombie.mp4" type="video/mp4">
+                    </video>
                 </div>
                 <div class="showcase-content reveal">
-                    <h2>Gameplay &amp; immersion</h2>
+                    <h2>Terre des Zombies</h2>
                     <p>
-                        Notre démo met en avant le rendu visuel, les animations et les interactions
-                        que nous intégrons dans chaque titre. Chaque frame est pensée pour
-                        captiver et surprendre.
+                        Découvrez le gameplay de notre jeu d'action survie : combats intenses,
+                        environnements post-apocalyptiques et mécaniques de tir en 3D.
                     </p>
                     <ul class="showcase-stats">
                         <li>
@@ -227,7 +244,7 @@
                             <span>Indépendant</span>
                         </li>
                     </ul>
-                    <button class="btn btn-primary" id="openVideo">Regarder la bande-annonce</button>
+                    <button class="btn btn-primary" id="openVideo">Voir le gameplay en plein écran</button>
                 </div>
             </div>
         </section>
@@ -339,7 +356,7 @@
         <div class="video-modal-content">
             <button class="video-modal-close" id="closeVideoBtn" aria-label="Fermer la vidéo">&times;</button>
             <video controls id="trailerVideo">
-                <source src="videos/video loisir.mp4" type="video/mp4">
+                <source src="videos/jeu terre zombie.mp4" type="video/mp4">
                 Votre navigateur ne supporte pas la lecture vidéo.
             </video>
         </div>
